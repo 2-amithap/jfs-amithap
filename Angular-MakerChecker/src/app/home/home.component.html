@@ -1,0 +1,26 @@
+
+<h1>Home</h1>
+<p>Maker Checker project with Angular 7 </p>
+<p>Your role is:<strong>{{currentUser.role}}</strong></p>
+<p>This page can be accessed by all authenticated users.</p>
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{userFromApi.id}}</th>
+        <td>{{userFromApi.firstName}}</td>
+        <td>{{userFromApi.lastName}}</td>
+        <td>{{userFromApi.role}}</td>
+      </tr>
+    </tbody>
+    </table>
+
+<p><a [routerLink]="['/login']">Logout</a></p>
