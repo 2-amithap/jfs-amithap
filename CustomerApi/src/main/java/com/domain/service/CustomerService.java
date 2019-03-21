@@ -10,6 +10,7 @@ public interface CustomerService {
 
 	List<Customer> findAll();
 	//Stream<Customer> findcustByStatus(String status);
-	Customer findById(int cust_id);
+	//Customer findById(int cust_id);
+	Stream<Customer> findByStatus(String status);
 	
 }

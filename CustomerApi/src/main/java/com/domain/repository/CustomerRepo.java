@@ -11,11 +11,14 @@ import org.springframework.data.repository.query.Param;
 
 import com.domain.entity.Customer;
 
+
 public interface CustomerRepo extends Repository <Customer, Integer> {
 
 	List<Customer> findAll();
 	
 //	@Query("SELECT c FROM cust_master c where c.status = :status") 
 //	Stream<Customer> findByStatus(@Param("status") String status);
-   Customer findOne(int cust_id);
+//   Customer findOne(int cust_id);
+
+   Stream<Customer> findByStatus(String status);
 }

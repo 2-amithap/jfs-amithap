@@ -23,15 +23,15 @@ public class CustomerServiceImpl implements CustomerService {
 		// TODO Auto-generated method stub
 		return repository.findAll();
 	}
-	 @Override
-	    public Customer findById(int cust_id) {
-	        return repository.findOne(cust_id);
-	    }
-//	
-//	public Stream<Customer> findcustByStatus(String status) {
-//		// TODO Auto-generated method stub
-//		return repository.findByStatus(status);
-//	}
+//	 @Override
+//	    public Customer findById(int cust_id) {
+//	        return repository.findOne(cust_id);
+//	    }
+	
+	public Stream<Customer> findByStatus(String status) {
+		// TODO Auto-generated method stub
+		return repository.findByStatus(status);
+	}
 
 
 

@@ -30,19 +30,21 @@ private CustomerService customerService;
 	}
 	
 	
-	@GetMapping("/{cust_id}")
-	public Customer findone(@PathVariable int cust_id) throws Exception {
-		return customerService.findById(cust_id);
-	}
+//	@GetMapping("/{cust_id}")
+//	public Customer findone(@PathVariable int cust_id) throws Exception {
+//		return customerService.findById(cust_id);
+//	}
 //	@GetMapping(path = {"/{id}"})
 //	    public Customer findOne(@PathVariable("id") int id){
 //	        return customerService.findById(id);
 //	    }
-	/*
-	 * @GetMapping(path = {"/{status}"}) public Stream<Customer>
-	 * findByStatus(@PathVariable("status") String status){ return
-	 * customerService.findcustByStatus(status); }
-	 */
+	
+	  @GetMapping(path = {"/{status}"}) public Stream<Customer>
+	  findByStatus(@PathVariable("status") String status)
+	  { 
+		  return customerService.findByStatus(status);
+	  }
+	 
 	 
 	 
 }
